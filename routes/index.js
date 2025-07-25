@@ -23,8 +23,8 @@ router.put('/users/:id', authenticationToken, UserController.updateUser);
 
 //post
 router.post('/post', authenticationToken, PostController.addPost);
-router.get('/post', PostController.getPosts);
-router.get('/post/:id', PostController.getPostById);
+router.get('/post', authenticationToken, PostController.getPosts);
+router.get('/post/:id', authenticationToken, PostController.getPostById);
 router.put('/post/:id', authenticationToken, PostController.updatePost);
 router.delete('/post/:id', authenticationToken, PostController.deletePost);
 
